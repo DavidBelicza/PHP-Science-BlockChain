@@ -11,12 +11,15 @@ declare(strict_types=1);
 
 namespace PhpScience\BlockChain\Base;
 
-interface CryptInterface
+interface BlockChainInterface
 {
     /**
-     * @param BlockInterface $block
      *
-     * @return string
      */
-    public function createHash(BlockInterface $block): string;
+    public function validate();
+
+    /**
+     * @return BlockInterface[]
+     */
+    public function getBlocks(): array;
 }

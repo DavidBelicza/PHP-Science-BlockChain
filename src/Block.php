@@ -1,6 +1,6 @@
 <?php
 /**
- * PHP Science TextRank (http://php.science/)
+ * PHP Science BlockChain (http://php.science/)
  *
  * @see     https://github.com/davidbelicza/php-science-blockchain
  * @license https://opensource.org/licenses/MIT the MIT License
@@ -97,5 +97,13 @@ class Block implements BlockInterface
     public function getDataObject(): DataObjectInterface
     {
         return $this->dataObject;
+    }
+
+    /**
+     * @return string
+     */
+    public function getHash(): string
+    {
+        return $this->hash;
     }
 }

@@ -1,6 +1,6 @@
 <?php
 /**
- * PHP Science TextRank (http://php.science/)
+ * PHP Science BlockChain (http://php.science/)
  *
  * @see     https://github.com/davidbelicza/php-science-blockchain
  * @license https://opensource.org/licenses/MIT the MIT License
@@ -32,4 +32,9 @@ interface BlockInterface
      * @return DataObjectInterface
      */
     public function getDataObject(): DataObjectInterface;
+
+    /**
+     * @return string
+     */
+    public function getHash(): string;
 }

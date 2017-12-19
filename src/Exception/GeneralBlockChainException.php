@@ -9,14 +9,10 @@
 
 declare(strict_types=1);
 
-namespace PhpScience\BlockChain\Base;
+namespace PhpScience\BlockChain\Exception;
 
-interface CryptInterface
+use Exception;
+
+class GeneralBlockChainException extends Exception
 {
-    /**
-     * @param BlockInterface $block
-     *
-     * @return string
-     */
-    public function createHash(BlockInterface $block): string;
 }

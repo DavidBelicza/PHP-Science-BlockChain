@@ -1,6 +1,6 @@
 <?php
 /**
- * PHP Science TextRank (http://php.science/)
+ * PHP Science BlockChain (http://php.science/)
  *
  * @see     https://github.com/davidbelicza/php-science-blockchain
  * @license https://opensource.org/licenses/MIT the MIT License
@@ -18,7 +18,7 @@ trait CryptArgonTrait
      *
      * @return string
      */
-    public function crypt(string $data): string
+    protected function crypt(string $data): string
     {
         return password_hash(
             $data,

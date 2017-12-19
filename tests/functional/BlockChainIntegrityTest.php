@@ -9,14 +9,14 @@
 
 declare(strict_types=1);
 
-namespace PhpScience\BlockChain\Base;
+namespace PhpScience\BlockChain;
 
-interface CryptInterface
+use PHPUnit\Framework\TestCase;
+
+class BlockChainIntegrityTest extends TestCase
 {
-    /**
-     * @param BlockInterface $block
-     *
-     * @return string
-     */
-    public function createHash(BlockInterface $block): string;
+    public function testValami()
+    {
+        $this->assertTrue(true);
+    }
 }
