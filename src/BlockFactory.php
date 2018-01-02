@@ -12,26 +12,10 @@ declare(strict_types=1);
 namespace PhpScience\BlockChain;
 
 use PhpScience\BlockChain\Base\BlockInterface;
-use PhpScience\BlockChain\Base\CryptInterface;
 use PhpScience\BlockChain\Base\DataObjectInterface;
 
 class BlockFactory
 {
-    /**
-     * @var CryptInterface
-     */
-    private $crypt;
-
-    /**
-     * BlockFactory constructor.
-     *
-     * @param CryptInterface $crypt
-     */
-    public function __construct(CryptInterface $crypt)
-    {
-        $this->crypt = $crypt;
-    }
-
     /**
      * @param int                 $index
      * @param float               $timeStamp

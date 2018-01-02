@@ -15,5 +15,16 @@ use JsonSerializable;
 
 interface DataObjectInterface extends JsonSerializable
 {
+    /**
+     * @param string $key
+     * @param mixed  $value
+     */
+    public function setData(string $key, $value);
 
+    /**
+     * @param string $key
+     *
+     * @return mixed
+     */
+    public function getData(string $key);
 }

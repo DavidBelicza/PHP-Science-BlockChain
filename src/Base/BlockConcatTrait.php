@@ -18,6 +18,6 @@ trait BlockConcatTrait
         return $block->getIndex()
             . '|' . $block->getTimeStamp()
             . '|' . $block->getPreviousHash()
-            . '|' . $block->getDataObject()->jsonSerialize();
+            . '|' . implode('-', $block->getDataObject()->jsonSerialize());
     }
 }

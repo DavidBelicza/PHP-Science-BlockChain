@@ -27,7 +27,7 @@ class BlockChain implements BlockChainInterface
     /**
      * @param array $blocks
      */
-    public function __construct(array $blocks)
+    public function __construct(array $blocks = [])
     {
         $this->blocks = $blocks;
     }
@@ -38,6 +38,22 @@ class BlockChain implements BlockChainInterface
     public function validate()
     {
         $this->validateChainIntegrity($this->blocks);
+    }
+
+    /**
+     * @param BlockInterface $block
+     */
+    public function addBlock(BlockInterface $block)
+    {
+        $this->blocks[] = $block;
+    }
+
+    /**
+     * @return BlockInterface
+     */
+    public function getLastBlock(): BlockInterface
+    {
+        return $this->blocks[count($this->blocks ) - 1];
     }
 
     /**
